@@ -1,0 +1,103 @@
+/* Base styling */
+body {
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  color: #000000;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Optional smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navigation bar container */
+.nav-container {
+  width: 100%;
+  background-color: #dfd3c3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation bar content */
+.website-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.website-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.website-nav a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.2s ease-in-out;
+}
+
+.website-nav a:hover {
+  color: #8b4513; /* Coffee brown */
+}
+
+.website-nav h1 {
+  font-size: 20px;
+}
+
+/* Slogan block */
+.slogan-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 613px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  background-color: #f0ece2;
+  background-image: url("completelycoffee/assets/slogan-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+
+/* View block */
+.view-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 400px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  background-color: #f0ece2;
+}
+
+/* Button styling */
+.button-container {
+  margin-top: 1.5rem;
+}
+
+button {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #a0522d;
+}
