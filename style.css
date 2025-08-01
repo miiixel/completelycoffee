@@ -61,7 +61,7 @@ html {
   font-size: 20px;
   text-align: center;
   background-color: #f0ece2;
-  background-image: url("completelycoffee/assets/slogan-background.jpg");
+  background-image: url("assets/slogan-background.jpg");
   background-size: cover;
   background-position: center;
   color: #333;
@@ -100,4 +100,27 @@ button {
 
 button:hover {
   background-color: #a0522d;
+}
+
+.explore-page {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0ece2;
+  
+  
+}
+.explore-blocks {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 2rem;
+}
+
+.explore-blocks > div {
+  flex: 1;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
