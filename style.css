@@ -1,31 +1,53 @@
-/* Base styling */
+/* ========== BASE STYLING ========== */
 body {
   margin: 0;
   transition: all 0.3s ease-in-out;
-  color: #000000;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #333; /* Softer than pure black */
+  font-weight: 400; /* Regular weight for better readability */
+  font-family: 'Inter', Arial, Helvetica, sans-serif; /* Modern sans-serif */
+  line-height: 1.6;
+  background-color: #faf9f7; /* Soft off-white background */
 }
 
-/* Optional smooth scroll */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Navigation bar container */
-.nav-container {
-  width: 100%;
-  background-color: #dfd3c3;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Headings */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.5em;
 }
 
-/* Navigation bar content */
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+/* ========== NAVIGATION BAR ========== */
+.nav-container {
+  width: 100%;
+  background-color: #f0dfc9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
 .website-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .website-nav ul {
@@ -36,21 +58,16 @@ html {
   padding: 0;
 }
 
-.website-nav a {
-  text-decoration: none;
-  color: #000;
-  transition: color 0.2s ease-in-out;
-}
-
 .website-nav a:hover {
   color: #8b4513; /* Coffee brown */
 }
 
 .website-nav h1 {
-  font-size: 20px;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
-/* Slogan block */
+/* ========== SLOGAN BLOCK ========== */
 .slogan-block {
   display: flex;
   align-items: center;
@@ -58,16 +75,17 @@ html {
   margin: auto;
   height: 613px;
   width: 100%;
-  font-size: 20px;
+  font-size: 1.25rem; /* ~20px */
   text-align: center;
   background-color: #f0ece2;
   background-image: url("assets/slogan-background.jpg");
   background-size: cover;
   background-position: center;
   color: #333;
+  padding: 0 1rem;
 }
 
-/* View block */
+/* ========== VIEW BLOCK ========== */
 .view-block {
   display: flex;
   flex-direction: column;
@@ -76,12 +94,13 @@ html {
   margin: auto;
   height: 400px;
   width: 100%;
-  font-size: 20px;
+  font-size: 1.125rem; /* ~18px */
   text-align: center;
   background-color: #f0ece2;
+  padding: 0 1rem;
 }
 
-/* Button styling */
+/* ========== BUTTONS ========== */
 .button-container {
   margin-top: 1.5rem;
 }
@@ -92,23 +111,24 @@ button {
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #a0522d;
+  transform: translateY(-2px);
 }
 
+/* ========== EXPLORE PAGE ========== */
 .explore-page {
   text-align: center;
   padding: 1.5rem;
   background-color: #f0ece2;
-  
-  
 }
+
 .explore-blocks {
   display: flex;
   justify-content: space-between;
@@ -120,15 +140,47 @@ button:hover {
   flex: 1;
   background-color: #dfd3c3;
   padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
   border-radius: 40px;
-  font-size: 20px;
-  
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .explore-blocks img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-top: 1rem;
+}
+
+/* Make links look like blocks */
+.explore-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.explore-link > div {
+  background-color: #dfd3c3;
+  padding: 1rem;
+  border-radius: 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.explore-link > div:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.explore-link img {
   width: 100%;
   height: 600px;
   object-fit: cover;
