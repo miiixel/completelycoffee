@@ -1,20 +1,25 @@
 /* ========== BASE STYLING ========== */
-body {
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
   transition: all 0.3s ease-in-out;
   color: #333; /* Softer than pure black */
   font-weight: 400; /* Regular weight for better readability */
   font-family: 'Inter', Arial, Helvetica, sans-serif; /* Modern sans-serif */
   line-height: 1.6;
   background-color: #faf9f7; /* Soft off-white background */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
   display: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* Headings */
@@ -38,6 +43,7 @@ a {
 
 /* ========== NAVIGATION BAR ========== */
 .nav-container {
+  flex: 0 0 auto;
   width: 100%;
   background-color: #f0dfc9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
@@ -186,4 +192,77 @@ button:hover {
   object-fit: cover;
   border-radius: 30px;
   margin-top: 1rem;
+}
+
+/* ========== LOGIN PAGE ========== */
+.login-page {
+  /* body is already flex-column with min-height:100vh */
+  background-color: #faf9f7;
+}
+
+.login-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.login-container > form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-container button {
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+  width: 100%;
+}
+
+.login-container button:hover {
+  background-color: #a0522d;
+  transform: translateY(-2px);
+}
+
+.login-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login-container a {
+  color: #8b4513;
+  font-weight: 500;
 }
